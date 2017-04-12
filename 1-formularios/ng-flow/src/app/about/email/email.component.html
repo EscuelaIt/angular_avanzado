@@ -1,0 +1,35 @@
+<form [formGroup]="messageForm"
+      (ngSubmit)="onSubmit()">
+  <fieldset>
+    <div>
+      <label for="sender">Email</label>
+      <input formControlName="sender"
+             type="email">
+    </div>
+    <div>
+      <label for="subject">Subject</label>
+      <input formControlName="subject"
+             type="text">
+    </div>
+    <div>
+      <label for="body">Body text</label>
+      <textarea formControlName="body"
+                cols="30"
+                rows="10">
+      </textarea>
+    </div>
+  </fieldset>
+  <button type="submit"
+          [disabled]="!messageForm.valid">Send!!</button>
+</form>
+<blockquote>
+  <p>
+    {{messageForm.errors | json}}
+  </p>
+  <p>
+    {{messageForm.valid | json}}
+  </p>
+  <p>
+    {{messageForm.value | json}}
+  </p>
+</blockquote>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms/';
-import { message } from './../models/message.class';
+import { Message } from './../models/message.class';
 
 @Component({
   selector: 'ab-email',
@@ -8,7 +8,7 @@ import { message } from './../models/message.class';
   styles: []
 })
 export class EmailComponent implements OnInit {
-  public message: message
+  public message: Message
   public messageForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }

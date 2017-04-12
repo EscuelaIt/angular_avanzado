@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <nav>
       <a [routerLink]="[ '' ]"  class="button button-clear">Home</a>
+      <a [routerLink]="[ 'cash' ]"  class="button button-clear">Cash</a>
       <a [routerLink]="[ 'about' ]"  class="button button-clear">About</a>
     </nav>
   `,

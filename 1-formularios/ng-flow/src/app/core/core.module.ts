@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: './../about/about.module#AboutModule'
+  },
+  {
+    path: 'cash',
+    loadChildren: './../cash/cash.module#CashModule'
   }
 ];
 

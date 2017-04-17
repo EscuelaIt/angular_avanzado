@@ -6,6 +6,6 @@ export class NgFlowPage {
   }
 
   getParagraphText() {
-    return element(by.css('ab-root h1')).getText();
+    return element(by.css('ab-home')).getText();
   }
 }

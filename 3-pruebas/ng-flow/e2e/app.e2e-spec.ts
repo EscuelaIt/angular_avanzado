@@ -7,8 +7,8 @@ describe('ng-flow App', () => {
     page = new NgFlowPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Hello!! Angular is amazing.', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ab works!');
+    expect(page.getParagraphText()).toEqual('Hello!! Angular is amazing.');
   });
 });

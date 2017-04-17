@@ -30,4 +30,11 @@ describe('EmailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call onSubmit', () => {
+    spyOn(component, 'onSubmit').and.callThrough();
+    component.onSubmit();
+    expect(component.onSubmit).toHaveBeenCalled();
+  });
+
 });

@@ -36,4 +36,9 @@ describe('ShellComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render a section element', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('section')).toBeTruthy();
+  }));
 });

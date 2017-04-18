@@ -1,0 +1,41 @@
+<form [formGroup]="operationForm"
+      (ngSubmit)="onSubmit()">
+  <fieldset>
+    <section>
+      <label for="date">Date</label>
+      <input formControlName="date"
+             type="date">
+      <span *ngIf="formTools.hasErrorsToShow('date')"><em>{{ formTools.getErrors('date') | json }}</em></span>
+    </section>
+    <section>
+      <label for="amount">Amount</label>
+      <input formControlName="amount"
+             type="number">
+      <ab-control-errors field="amount"
+                         [form]="operationForm"></ab-control-errors>
+    </section>
+    <ab-input label="Description"
+              field="description"
+              [form]="operationForm"
+              type="text"></ab-input>
+    <section>
+      <label for="operationType">Type of Operation</label>
+      <input formControlName="operationType"
+             type="number">
+      <ab-control-errors></ab-control-errors>
+    </section>
+  </fieldset>
+  <button type="submit"
+          [disabled]="!operationForm.valid">Save</button>
+</form>
+<blockquote>
+  <p>
+    {{operationForm.errors | json}}
+  </p>
+  <p name="form-valid">
+    {{operationForm.valid | json}}
+  </p>
+  <p>
+    {{operationForm.value | json}}
+  </p>
+</blockquote>

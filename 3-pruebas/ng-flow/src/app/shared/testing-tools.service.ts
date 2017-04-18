@@ -6,7 +6,11 @@ export class TestingTools {
   constructor(private fixture) { }
 
   queryElementByCss(css: string): HTMLElement {
-    return this.fixture.debugElement.query(By.css(css)).nativeElement;
+    return this.queryDebugElementByCss(css).nativeElement;
+  }
+
+  queryDebugElementByCss(css: string): DebugElement {
+    return this.fixture.debugElement.query(By.css(css));
   }
 
   queryAllByCss(css: string): DebugElement[] {

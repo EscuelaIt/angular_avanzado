@@ -1,3 +1,4 @@
+import { TranslateService } from 'ng2-translate';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +13,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.setDefaultLang('es');
+  }
 
   ngOnInit() {
   }

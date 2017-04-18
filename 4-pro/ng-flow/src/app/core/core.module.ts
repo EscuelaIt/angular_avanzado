@@ -31,7 +31,7 @@ const routes: Routes = [
     HttpModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      useFactory: tralationFactory,
       deps: [Http]
     })
   ],
@@ -45,3 +45,7 @@ const routes: Routes = [
   ]
 })
 export class CoreModule { }
+
+export function tralationFactory(http: Http) {
+  return new TranslateStaticLoader(http, '/assets/i18n', '.json');
+}
